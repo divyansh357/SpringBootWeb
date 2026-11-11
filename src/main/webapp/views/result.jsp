@@ -8,7 +8,11 @@
 
         <%--<h2>Result is: <%= session.getAttribute("result")%></h2>--%>
 
-        <h2>Result is: ${result} </h2>
+        <%-- <h2>Result is: ${result} </h2> --%>
+
+         <h2>Welcome To Divyansh  </h2>
+
+         <p> ${alien} </p>
 
 
     </body>

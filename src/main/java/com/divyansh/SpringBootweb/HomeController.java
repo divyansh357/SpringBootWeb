@@ -14,7 +14,7 @@ import java.net.http.HttpRequest;
 @Controller
 public class HomeController {
 
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     public String home(){
         System.out.println("Home method called");
         return "index";
@@ -43,6 +43,18 @@ public class HomeController {
         int result = num + num2;
         mv.addObject("result", result);
         mv.setViewName("result");
+        return mv;
+    }
+
+    // add alien
+    @RequestMapping("addAlien")
+    public ModelAndView addAlien(@RequestParam("aid") int aid, @RequestParam("aname") String aname, ModelAndView mv) {
+        Alien alien=new Alien();
+        alien.setAid(aid);
+        alien.setAname(aname);
+        mv.addObject("alien",alien);
+        mv.setViewName("result");
+
         return mv;
     }
 
